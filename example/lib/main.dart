@@ -379,8 +379,8 @@ class _DemoHomeState extends State<DemoHome> {
           children: <Widget>[
             FloatingActionButton(
               onPressed: () async {
-                File video =
-                    await ImagePicker.pickVideo(source: ImageSource.camera);
+                dynamic video =
+                    await ImagePicker().pickVideo(source: ImageSource.camera);
                 setState(() {
                   _video.text = video.path;
                 });
@@ -393,8 +393,8 @@ class _DemoHomeState extends State<DemoHome> {
             ),
             FloatingActionButton(
               onPressed: () async {
-                File video =
-                    await ImagePicker.pickVideo(source: ImageSource.gallery);
+                dynamic video =
+                    await ImagePicker().pickVideo(source: ImageSource.gallery);
                 setState(() {
                   _video.text = video?.path;
                 });
